@@ -10,6 +10,7 @@ bool valid(int n)  {
 		return false;
 	return true;
 }
+
 // Adding a comment before the main function.
 int main(int argc, char* argv[]) {
 	
