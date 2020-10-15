@@ -5,6 +5,11 @@ positive number. */
 #include <stdlib.h>
 #include <math.h>
 
+bool valid(int n)  {
+	if (n < 0)
+		return false;
+	return true;
+}
 // Adding a comment before the main function.
 int main(int argc, char* argv[]) {
 	
@@ -14,8 +19,14 @@ int main(int argc, char* argv[]) {
 	}
 
 	int input = atoi(argv[1]);
+	if (!valid(input)) {
+		printf("Negative Number\n");
+		printf("End of program. Exiting\n");
+		return (0);
+	}
+
 	printf("Sqrt of %d is %f\n",input,sqrt(input));
-	printf("End of program. Exiting.\n");
+	printf("End of program. Exiting\n");
 	return(0);
 
 } // end main
